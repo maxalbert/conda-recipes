@@ -1,0 +1,43 @@
+package:
+  name: vis-framework
+  version: "2.4.1dev"
+
+source:
+  git_url: https://github.com/maxalbert/vis-framework.git
+  git_rev: bcc604468c27a6bfef58e1af3ec3b04f49453e0c
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - music21 >=2.2.1
+    - pandas >=0.18
+
+  run:
+    - python
+    - music21 >=2.2.1
+    - pandas >=0.18
+    - numexpr
+    - bottleneck
+
+test:
+  imports:
+    - outputlilypond
+    - vis
+    - vis.analyzers
+    - vis.analyzers.experimenters
+    - vis.analyzers.indexers
+    - vis.models
+
+  # commands:
+  #   - python $SRC_DIR/run_tests.py
+
+  requires:
+    - mock
+    - scipy
+
+about:
+  home: http://elvisproject.ca/api/
+  license: GNU Affero General Public License v3 or later (AGPLv3+)
+  summary: 'The VIS Framework for Music Analysis'
