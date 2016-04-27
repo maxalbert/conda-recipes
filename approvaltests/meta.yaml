@@ -1,0 +1,29 @@
+package:
+  name: approvaltests
+  version: "0.1.12dev"
+
+source:
+  git_url: https://github.com/maxalbert/Approvaltests.Python
+  git_rev: HACK_allow_passing_custom_method_name
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - approvaltests
+
+  #commands:
+  #  - python -m unittest discover -s tests/ -p "*.py"
+
+about:
+  home: https://github.com/approvals/ApprovalTests.Python
+  license: Apache License Version 2.0
+  license_file: LICENSE
+  summary: 'approvaltests is the Python port of ApprovalTests, an open source assertion/verification library to aid testing.'
